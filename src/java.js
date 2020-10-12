@@ -45,9 +45,8 @@ let days = [
   }
   
   function showTemperature(response) {
-    let temperature = Math.round(response.data.main.temp);
+    
     let temp = document.querySelector("#one");
-    temp.innerHTML = temperature;
     let icon = document.querySelector("#sunny");
     let wind = document.querySelector("#wind");
     let precipitation = document.querySelector("#precipitation");
@@ -55,15 +54,17 @@ let days = [
 
     celsiusTemperature = response.data.main.temp;
 
-    icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-    icon.setAttribute("alt", response.data.weather[0].main);
+    let temperature = Math.round(celsiusTemperature);
     let local = document.querySelector("h1");
     let city = response.data.name;
     local.innerHTML = city;
     precipitation.innerHTML = (response.data.main.humidity);
     wind.innerHTML = Math.round(response.data.wind.speed);
     description.innerHTML = response.data.weather[0].description;
+    icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+    icon.setAttribute("alt", response.data.weather[0].main);
+
   }
   
   function searchCity(city) {
@@ -108,6 +109,8 @@ let days = [
     let temperatureElement = document.querySelector("p");
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
   }
+
+  let celsiusTemperature = null;
   
   let form = document.querySelector("#form-search");
   form.addEventListener("submit", changeCity);

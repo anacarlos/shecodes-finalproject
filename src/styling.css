@@ -2,15 +2,14 @@
     border-radius: 120px;
     border: 10px #318fb5 solid;
     position: relative;
-    top: 100px;
     padding: 20px;
+    top: 100px;
     margin: 0 auto;
     width: 55%;
   }
   
   h1 {
     color: #318fb5;
-    background-color: #e0ece4;
     width: 25%;
     height: 43px;
     margin: 10px 65px;
