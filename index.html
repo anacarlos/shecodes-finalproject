@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>SheCodes Final Project</title>
+    <link rel="stylesheet" href="src/styling.css">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="initial">
+        <form id = "form-search">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" id="city-search" class="form-control" placeholder="Enter a city..." autocomplete="off">
+                </div>
+                <div class="col">
+                    <button type="submit" id="city-button" class="btn btn-outline-primary">Search</button>
+                    <button type="button" id="current-button" class="btn btn-outline-success">Current</button>
+                </div>
+            </div>
+        </form>
+        <br>
+        <h1>
+            <strong>Porto</strong>
+        </h1>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    <h4>
+                    <strong>Thursday, 13th August<br> 2020</strong></h4> 
+                        <small>@12:00pm</small>
+                </div>
+                <div class="col">
+                    <img src="images/sun.png" alt= "Clear" width="90" id="sunny" style="float:left"> 
+                    <p id = "one">23</p>
+                        <a href = "" id = "celsius-link" class="active">ºC |</a>
+                        <a href = "" id = "fahrenheit-link">ºF</a>
+                    <ul>
+                        <li>
+                            Wind: <span id="wind"></span>%
+                        </li>
+                        <li>
+                            Precipitation: <span id="precipitation"></span>km
+                        </li>
+                        <li>
+                            <span id="description"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row weather-forecast" id="forecast"></div>
+            </div>
+        </div>
+    </div>
+<script src="src/java.js"></script>
+</body>
+</html>
