@@ -1,15 +1,16 @@
 .initial {
     border-radius: 120px;
-    border: 10px #318fb5 solid;
+    border: 10px black solid;
     position: relative;
     padding: 20px;
     top: 100px;
+    background-color: #9cada4; 
     margin: 0 auto;
     width: 55%;
   }
   
   h1 {
-    color: #318fb5;
+    color: white;
     width: 25%;
     height: 43px;
     margin: 10px 65px;
@@ -18,30 +19,30 @@
   }
   
   h4 {
-    color: #318fb5;
+    color: white;
     margin: 20px 50px;
     font-size: small;
     font-family: "Overpass", sans-serif;
   }
   
   small {
-    color: #318fb5;
+    color: white;
     text-align: center;
     margin: 20px 50px;
     font-family: "Overpass", sans-serif;
   }
   
-  #one {
-    font-size: 64px;
+  p {
+    font-size: 58px;
     text-align: left;
     font-weight: 100;
-    color: #318fb5;
+    color: white;
     font-family: "Overpass", sans-serif;
   }
-  
+
   a {
     position: relative;
-    left: 180px;
+    left: 160px;
     top: -100px;
   }
 
@@ -53,7 +54,7 @@
 
   li {
     list-style: none;
-    color: #318fb5;
+    color: white;
     font-family: "Overpass", sans-serif;
     text-transform: capitalize;
   }
@@ -61,9 +62,9 @@
   .form-row {
     position: relative;
     margin: 0px auto;
-    color: #318fb5;
+    color: white;
     font-family: "Overpass", sans-serif;
-    padding: 30px 20px;
+    padding: 30px;
     left: 100px;
   }
 
@@ -72,18 +73,11 @@
     position: relative;
     margin: 0px auto;
     font-weight: bold;
-    color: #318fb5;
+    color: white;
   }
 
   #day {
     background: #e0ece4;
     padding: 5px;
   }
-    
-  p {
-    color: #318fb5;
-    font-family: "Overpass", sans-serif;
-    font-weight: lighter;
-  }
-    
   

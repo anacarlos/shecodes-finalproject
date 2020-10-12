@@ -47,6 +47,7 @@ let days = [
   function showTemperature(response) {
     
     let temp = document.querySelector("#one");
+    
     let icon = document.querySelector("#sunny");
     let wind = document.querySelector("#wind");
     let precipitation = document.querySelector("#precipitation");
@@ -54,7 +55,8 @@ let days = [
 
     celsiusTemperature = response.data.main.temp;
 
-    let temperature = Math.round(celsiusTemperature);
+    let temperature = Math.round(response.data.main.temp);
+    temp.innerHTML = temperature;
     let local = document.querySelector("h1");
     let city = response.data.name;
     local.innerHTML = city;
@@ -93,24 +95,18 @@ let days = [
   let current = document.querySelector("#current-button");
   current.addEventListener("click", setPosition);
 
-  function displayFahTemperature(event){
+  function displayFahTemperature(event) {
     event.preventDefault();
-    let temperatureElement = document.querySelector("#one");
-    celsiusLink.classList.remove("active");
-    fahLink.classList.add("active");
+    let temperatureElement = document.querySelector("p");
     let fahTemperature = (celsiusTemperature * 9) / 5 + 32;
     temperatureElement.innerHTML = Math.round(fahTemperature);
   }
 
   function displayCelsiusTemperature(event) {
     event.preventDefault();
-    celsiusLink.classList.add("#active");
-    fahLink.classList.remove("#active");
     let temperatureElement = document.querySelector("p");
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
   }
-
-  let celsiusTemperature = null;
   
   let form = document.querySelector("#form-search");
   form.addEventListener("submit", changeCity);
